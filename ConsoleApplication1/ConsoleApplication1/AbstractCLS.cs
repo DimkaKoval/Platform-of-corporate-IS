@@ -17,7 +17,7 @@ namespace ConsoleApplication1
         void readFromFile();
         void streamInFile();
     }
-    public class PhoneContact : AbstractCLS, IFileManager
+    public class PhoneContact : AbstractCLS, IFileManager, IComparable
     {
         private string phoneNumber;
         public PhoneContact()
@@ -26,6 +26,17 @@ namespace ConsoleApplication1
             this.phoneNumber = "+380662541248";
         }
 
+        public PhoneContact(string _name, string _pNumber)
+        {
+            this.name = (_name != " ") ? _name : "Owner";
+            this.phoneNumber = (_pNumber != " ") ? _pNumber : "+380682134589";
+        }
+
+        public int CompareTo(object obj)
+        {
+            return name.CompareTo(obj);//?
+        }
+
         public override string Name()
         {
             return name;
@@ -43,7 +54,7 @@ namespace ConsoleApplication1
 
         public override string ToString()
         {
-            return "Name:" + " " + name + " " + "Phone Number: " + phoneNumber;
+            return "Name: " + name + " Phone Number: " + phoneNumber;
         }
     }
     public class MailContact : AbstractCLS, IFileManager
@@ -52,7 +63,7 @@ namespace ConsoleApplication1
         public MailContact()
         {
             this.name = "owner";
-            this.Mail = "@gmail.com";
+            this.Mail = "owner@gmail.com";
         }
 
         public override string Name()
@@ -61,7 +72,7 @@ namespace ConsoleApplication1
         }
         public void readFromFile()
         {
-           
+            throw new NotImplementedException();
         }
 
         public void streamInFile()
@@ -70,7 +81,7 @@ namespace ConsoleApplication1
         }
         public override string ToString()
         {
-            return "Name:" + " " + name + " " + "Mail: " + Mail;
+            return "Name: " + name + " Mail: " + Mail;
         }
     }
     public class SkypeContact : AbstractCLS, IFileManager
@@ -97,7 +108,7 @@ namespace ConsoleApplication1
         }
         public override string ToString()
         {
-            return "Name:" + " " + name + " " + "Skype name: " + Skype;
+            return "Name: " + name + " Skype name: " + Skype;
         }
     }
 }

@@ -10,6 +10,14 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
+            Collection.cContacts.Add(new PhoneContact("Ivan", "+380589872536"));
+            foreach(var t in Collection.cContacts)
+            {
+                Console.WriteLine(t.ToString());
+            }
+            PhoneContact p = new PhoneContact();
+            Console.WriteLine(p.ToString());
+            Console.ReadKey();
         }
     }
 }
