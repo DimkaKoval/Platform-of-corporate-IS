@@ -72,7 +72,7 @@ namespace ConsoleApplication1
         }
         public override string ToString()
         {
-            return "Name: " + Name + " " + "Mail: " + mail;
+            return "Name: " + Name + " Mail: " + mail;
         }
     }
 }
