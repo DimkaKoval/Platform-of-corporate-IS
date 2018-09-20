@@ -96,7 +96,7 @@ namespace ConsoleApplication1
         /// <returns> </ returns>
         public override string ToString()
         {
-            return "Name:" + " " + Name + " " + "Phone Number: " + phoneNumber;
+            return "Name: " + Name + " Phone Number: " + phoneNumber;
         }
     }
 }

@@ -99,7 +99,7 @@ namespace ConsoleApplication1
         /// <returns> </ returns>
         public override string ToString()
         {
-            return "Name:" +  Name  + "Skype: " + skype;
+            return "Name: " +  Name  + " Skype: " + skype;
         }
     }
 }
