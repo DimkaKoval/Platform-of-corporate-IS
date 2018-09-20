@@ -11,13 +11,9 @@ namespace ConsoleApplication1
 
     abstract public class AbstractCLS
     {
-       
-  
-        protected string name;
+       protected string name;
        abstract public string Name { get; set; }
        abstract public void moveToDictionary();
-        
-   
     }
 
     interface IFileManager
