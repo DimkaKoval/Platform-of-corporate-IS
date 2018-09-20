@@ -66,7 +66,7 @@ namespace ConsoleApplication1
                     if(arr[i] is SkypeContact)
                     writer.WriteLine(arr[i]);
 
-                    //writer.Write(writer.NewLine);
+                    ////writer.Write(writer.NewLine);
                 }
             }
         }
