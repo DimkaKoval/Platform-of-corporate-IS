@@ -39,6 +39,11 @@ namespace WpfApp
             ellipseTemp.StrokeThickness = 1.5;
         }
 
+        /// <summary>
+        /// Start point for drawing
+        /// </summary>
+        /// <param name="sender">Sender</param>
+        /// <param name="e">Mouse event</param>
         private void canvasDrawingArea_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             a=e.GetPosition(canvasDrawingArea);
@@ -48,6 +53,11 @@ namespace WpfApp
             isDraw = true;
         }
 
+        /// <summary>
+        /// End point for drawing
+        /// </summary>
+        /// <param name="sender">Sender</param>
+        /// <param name="e">Mouse event</param>
         private void canvasDrawingArea_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             b = e.GetPosition(canvasDrawingArea);
@@ -66,6 +76,11 @@ namespace WpfApp
             isDraw = false;
         }
 
+        /// <summary>
+        /// Creating ellipse mouse move
+        /// </summary>
+        /// <param name="sender">Sender</param>
+        /// <param name="e">Mouse event</param>
         private void canvasDrawingArea_MouseMove(object sender, MouseEventArgs e)
         {
             
