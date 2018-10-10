@@ -1,0 +1,13 @@
+D:\Platform-of-corporate-IS\Creativity\Task2\WpfApp\bin\Debug\WpfApp.exe
+D:\Platform-of-corporate-IS\Creativity\Task2\WpfApp\bin\Debug\WpfApp.pdb
+D:\Platform-of-corporate-IS\Creativity\Task2\WpfApp\obj\Debug\WpfApp.csprojResolveAssemblyReference.cache
+D:\Platform-of-corporate-IS\Creativity\Task2\WpfApp\obj\Debug\MainWindow.g.cs
+D:\Platform-of-corporate-IS\Creativity\Task2\WpfApp\obj\Debug\App.g.cs
+D:\Platform-of-corporate-IS\Creativity\Task2\WpfApp\obj\Debug\WpfApp_MarkupCompile.cache
+D:\Platform-of-corporate-IS\Creativity\Task2\WpfApp\obj\Debug\WpfApp_MarkupCompile.lref
+D:\Platform-of-corporate-IS\Creativity\Task2\WpfApp\obj\Debug\MainWindow.baml
+D:\Platform-of-corporate-IS\Creativity\Task2\WpfApp\obj\Debug\WpfApp.g.resources
+D:\Platform-of-corporate-IS\Creativity\Task2\WpfApp\obj\Debug\WpfApp.Properties.Resources.resources
+D:\Platform-of-corporate-IS\Creativity\Task2\WpfApp\obj\Debug\WpfApp.csproj.GenerateResource.Cache
+D:\Platform-of-corporate-IS\Creativity\Task2\WpfApp\obj\Debug\WpfApp.exe
+D:\Platform-of-corporate-IS\Creativity\Task2\WpfApp\obj\Debug\WpfApp.pdb
