@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Input;
 
+
+
 namespace WpfApp
 {
     public class CommandHandler : ICommand
@@ -11,10 +13,10 @@ namespace WpfApp
         private Action action;
         private bool canExecute;
 
-        public CommandHandler(Action action_, bool canExecute_)
+        public CommandHandler(Action act, bool canExe)
         {
-            this.action = action_;
-            this.canExecute = canExecute_;
+            this.action = act;
+            this.canExecute = canExe;
         }
 
         public event EventHandler CanExecuteChanged
