@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 D:\Platform-of-corporate-IS\Creativity\Task2\WpfApp\bin\Debug\WpfApp.exe
 D:\Platform-of-corporate-IS\Creativity\Task2\WpfApp\bin\Debug\WpfApp.pdb
 D:\Platform-of-corporate-IS\Creativity\Task2\WpfApp\obj\Debug\WpfApp.csprojResolveAssemblyReference.cache
@@ -11,3 +12,18 @@ D:\Platform-of-corporate-IS\Creativity\Task2\WpfApp\obj\Debug\WpfApp.Properties.
 D:\Platform-of-corporate-IS\Creativity\Task2\WpfApp\obj\Debug\WpfApp.csproj.GenerateResource.Cache
 D:\Platform-of-corporate-IS\Creativity\Task2\WpfApp\obj\Debug\WpfApp.exe
 D:\Platform-of-corporate-IS\Creativity\Task2\WpfApp\obj\Debug\WpfApp.pdb
+=======
+D:\Platform-of-corporate-IS\Creativity\Task2\WpfApp\bin\Debug\WpfApp.exe
+D:\Platform-of-corporate-IS\Creativity\Task2\WpfApp\bin\Debug\WpfApp.pdb
+D:\Platform-of-corporate-IS\Creativity\Task2\WpfApp\obj\Debug\WpfApp.csprojResolveAssemblyReference.cache
+D:\Platform-of-corporate-IS\Creativity\Task2\WpfApp\obj\Debug\MainWindow.g.cs
+D:\Platform-of-corporate-IS\Creativity\Task2\WpfApp\obj\Debug\App.g.cs
+D:\Platform-of-corporate-IS\Creativity\Task2\WpfApp\obj\Debug\WpfApp_MarkupCompile.cache
+D:\Platform-of-corporate-IS\Creativity\Task2\WpfApp\obj\Debug\WpfApp_MarkupCompile.lref
+D:\Platform-of-corporate-IS\Creativity\Task2\WpfApp\obj\Debug\MainWindow.baml
+D:\Platform-of-corporate-IS\Creativity\Task2\WpfApp\obj\Debug\WpfApp.g.resources
+D:\Platform-of-corporate-IS\Creativity\Task2\WpfApp\obj\Debug\WpfApp.Properties.Resources.resources
+D:\Platform-of-corporate-IS\Creativity\Task2\WpfApp\obj\Debug\WpfApp.csproj.GenerateResource.Cache
+D:\Platform-of-corporate-IS\Creativity\Task2\WpfApp\obj\Debug\WpfApp.exe
+D:\Platform-of-corporate-IS\Creativity\Task2\WpfApp\obj\Debug\WpfApp.pdb
+>>>>>>> 586a2d267c15da5e2edb0451a1bb8364efd74dc9

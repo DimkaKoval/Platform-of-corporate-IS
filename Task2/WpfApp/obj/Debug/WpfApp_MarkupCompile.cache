@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿WpfApp
 
 
@@ -18,3 +19,25 @@ MainWindow.xaml;
 
 False
 
+=======
+﻿WpfApp
+
+
+winexe
+C#
+.cs
+C:\Users\Admin\Desktop\Task2\WpfApp\obj\Debug\
+WpfApp
+none
+false
+DEBUG;TRACE
+C:\Users\Admin\Desktop\Task2\WpfApp\App.xaml
+11151548125
+
+101039906160
+121961529087
+MainWindow.xaml;
+
+True
+
+>>>>>>> 586a2d267c15da5e2edb0451a1bb8364efd74dc9
