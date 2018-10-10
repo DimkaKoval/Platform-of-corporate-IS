@@ -11,17 +11,49 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Shapes;
 
+/// <summary>
+/// Namespace WpfApp
+/// </summary>
 namespace WpfApp
 {
-    class ApplicationViewModel : INotifyPropertyChanged
+    /// <summary>
+    /// Class for drawin ellipse
+    /// </summary>
+    public class ApplicationViewModel : INotifyPropertyChanged
     {
+        /// <summary>
+        /// Ellipses colection
+        /// </summary>
         public ObservableCollection<Ellipse> ellipses;
+
+        /// <summary>
+        /// Field for drawing
+        /// </summary>
         public Canvas canvasDrawingArea;
+
+        /// <summary>
+        /// If the field is true then you can perform it
+        /// </summary>
         private bool canExecute;
+
+        /// <summary>
+        /// Implementation
+        /// </summary>
         private ICommand newFile;
+
+        /// <summary>
+        /// Implementation
+        /// </summary>
         private ICommand openFile;
+
+        /// <summary>
+        /// Implementation
+        /// </summary>
         private ICommand saveFile;
 
+        /// <summary>
+        /// Assign values to objects
+        /// </summary>
         public ApplicationViewModel()
         {
             this.ellipses = new ObservableCollection<Ellipse>();
@@ -29,6 +61,9 @@ namespace WpfApp
             this.canExecute = true;
         }
 
+        /// <summary>
+        /// Create new file
+        /// </summary>
         public ICommand NewFile
         {
             get
@@ -37,6 +72,9 @@ namespace WpfApp
             }
         }
 
+        /// <summary>
+        /// Download ellipse from file
+        /// </summary>
         public ICommand OpenFile
         {
             get
@@ -45,6 +83,9 @@ namespace WpfApp
             }
         }
 
+        /// <summary>
+        /// Save ellipse in file
+        /// </summary>
         public ICommand SaveFile
         {
             get
@@ -53,6 +94,9 @@ namespace WpfApp
             }
         }
 
+        /// <summary>
+        /// Event when property was changed
+        /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
 
         public void OnPropertyChanged(string prop)
@@ -64,12 +108,18 @@ namespace WpfApp
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(prop));
         }
 
+        /// <summary>
+        /// Create new file with drawing area
+        /// </summary>
         public void NewFileExecute()
         {
             this.canvasDrawingArea = new Canvas();
             this.ellipses.Clear();
         }
 
+        /// <summary>
+        /// Open xml file
+        /// </summary>
         public void OpenFileExecute()
         {
             this.canvasDrawingArea = new Canvas();
@@ -85,6 +135,9 @@ namespace WpfApp
             }
         }
 
+        /// <summary>
+        /// Save information in xml file
+        /// </summary>
         public void SaveFileExecute()
         {
             try
