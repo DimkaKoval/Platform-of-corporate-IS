@@ -43,44 +43,7 @@ namespace WpfApp
             ellipseTemp.Stroke = Brushes.Green;
             ellipseTemp.StrokeThickness = 1.5;
         }
-
-        /// <summary>
-        /// Start point for drawing
-        /// </summary>
-        /// <param name="sender">Sender</param>
-        /// <param name="e">Mouse event</param>
-        private void canvasDrawingArea_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            a=e.GetPosition(canvasDrawingArea);
-            ellipseTemp.Width = 0;
-            ellipseTemp.Height = 0;
-            canvasDrawingArea.Children.Add(ellipseTemp);
-            isDraw = true;
-        }
-
-        /// <summary>
-        /// End point for drawing
-        /// </summary>
-        /// <param name="sender">Sender</param>
-        /// <param name="e">Mouse event</param>
-        private void canvasDrawingArea_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            b = e.GetPosition(canvasDrawingArea);
-            EllipseInfo ellipse = new EllipseInfo();
-            ellipse.Shape.Height=Math.Abs(a.Y-b.Y);
-            ellipse.Shape.Width = Math.Abs(a.X-b.X);
-            ellipse.Shape.Stroke = Brushes.Red;
-            ellipse.Shape.StrokeThickness=1.5;
-            ellipse.Shape.Fill = Brushes.AliceBlue;
-            canvasDrawingArea.Children.Add(ellipse.Shape);
-            ellipse.TopLeft = (new Point(a.X > b.X ? b.X : a.X, a.Y > b.Y ? b.Y : a.Y));
-            Canvas.SetLeft(ellipse.Shape, ellipse.TopLeft.X);
-            Canvas.SetTop(ellipse.Shape, ellipse.TopLeft.Y);
-            canvasDrawingArea.Children.Remove(ellipseTemp);
-            ellipses.Add(ellipse);
-            isDraw = false;
-        }
-
+              
         /// <summary>
         /// Creating ellipse mouse move
         /// </summary>
@@ -116,6 +79,43 @@ namespace WpfApp
                     isDraw = false;
                 }
             }
+        }
+
+        /// <summary>
+        /// Start point for drawing
+        /// </summary>
+        /// <param name="sender">Sender</param>
+        /// <param name="e">Mouse event</param>
+        private void canvasDrawingArea_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            a = e.GetPosition(canvasDrawingArea);
+            ellipseTemp.Width = 0;
+            ellipseTemp.Height = 0;
+            canvasDrawingArea.Children.Add(ellipseTemp);
+            isDraw = true;
+        }
+
+        /// <summary>
+        /// End point for drawing
+        /// </summary>
+        /// <param name="sender">Sender</param>
+        /// <param name="e">Mouse event</param>
+        private void canvasDrawingArea_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            b = e.GetPosition(canvasDrawingArea);
+            EllipseInfo ellipse = new EllipseInfo();
+            ellipse.Shape.Height = Math.Abs(a.Y - b.Y);
+            ellipse.Shape.Width = Math.Abs(a.X - b.X);
+            ellipse.Shape.Stroke = Brushes.Red;
+            ellipse.Shape.StrokeThickness = 1.5;
+            ellipse.Shape.Fill = Brushes.AliceBlue;
+            canvasDrawingArea.Children.Add(ellipse.Shape);
+            ellipse.TopLeft = (new Point(a.X > b.X ? b.X : a.X, a.Y > b.Y ? b.Y : a.Y));
+            Canvas.SetLeft(ellipse.Shape, ellipse.TopLeft.X);
+            Canvas.SetTop(ellipse.Shape, ellipse.TopLeft.Y);
+            canvasDrawingArea.Children.Remove(ellipseTemp);
+            ellipses.Add(ellipse);
+            isDraw = false;
         }
     }
 }
