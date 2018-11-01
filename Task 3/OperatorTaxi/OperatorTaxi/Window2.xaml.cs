@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿//-----------------------------------------------------------------------
 // <copyright file="Window2.xaml.cs" company="The Four Shchews">
 // (c)TFS inc.
@@ -36,6 +37,55 @@ namespace OperatorTaxi
                 try
                 {
                     mainWindow.a.Orders.Add(new Order(this.startPoint.Text, this.endPoint.Text, Convert.ToInt32(this.count.Text), Status.NotAppointed, "------"));
+=======
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
+
+namespace OperatorTaxi
+{
+    /// <summary>
+    /// Interaction logic for Window2.xaml
+    /// </summary>
+    public partial class Window2 : Window
+    {
+        public Window2()
+        {
+            InitializeComponent();
+        }
+        private void AddOrder(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = (MainWindow)App.Current.MainWindow;
+            if (this.startPoint.Text != "" && this.endPoint.Text != "" && this.count.Text != "")
+            {
+                try
+                {
+                    mainWindow.a.Orders.Add(new Order(this.startPoint.Text, this.endPoint.Text, Convert.ToInt32(this.count.Text), status.NotAppointed, "------"));
+>>>>>>> 69475dd58d1dd7cfbd41bacb19a43a91ce78a4ba
                     this.Close();
                 }
                 catch (Exception)
@@ -50,3 +100,7 @@ namespace OperatorTaxi
         }
     }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 69475dd58d1dd7cfbd41bacb19a43a91ce78a4ba
