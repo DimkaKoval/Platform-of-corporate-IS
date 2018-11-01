@@ -23,5 +23,26 @@ namespace OperatorTaxi
         {
             InitializeComponent();
         }
+
+        private void AddTaxist(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = (MainWindow)App.Current.MainWindow;
+            if (this.Model.Text != "" && this.Number.Text != "")
+            {
+                try
+                {
+                    mainWindow.a.Taxists.Add(new Taxist(this.Model.Text, this.Number.Text, false));
+                    this.Close();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Неправильно введені дані");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Ви не ввели всі дані");
+            }
+        }
     }
 }
