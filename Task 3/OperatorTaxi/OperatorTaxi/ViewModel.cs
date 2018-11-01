@@ -20,12 +20,12 @@ namespace OperatorTaxi
     public class ViewModel : INotifyPropertyChanged
     {
         /// <summary>
-        /// 
+        ///  Contain value about path1
         /// </summary>
         private string path1;
 
         /// <summary>
-        /// 
+        ///  Contain value about path2
         /// </summary>
         private string path2;
 
@@ -251,9 +251,16 @@ namespace OperatorTaxi
             }
         }
 
+        /// <summary>
+        /// delegate for the event
+        /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public void OnPropertyChanged([CallerMemberName]string prop = "")
+        /// <summary>
+        /// Add changes
+        /// </summary>
+        /// <param name="prop">Property</param>
+        public void OnPropertyChanged([CallerMemberName]string prop = string.Empty)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(prop));
         }
