@@ -22,7 +22,7 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        
+
         <StackPanel Orientation="Vertical" Grid.Column="2">
             <Button Click="AddTaxi" Height="30" Margin="10" Content="Таксисти"/>
             <Button Click="AddOrder" Height="30" Margin="10" Content="Добавити замовлення"/>

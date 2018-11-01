@@ -1,43 +1,53 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+﻿//-----------------------------------------------------------------------
+// <copyright file="Window1.xaml.cs" company="The Four Shchews">
+// (c)TFS inc.
+// </copyright>
+//-----------------------------------------------------------------------
 
 namespace OperatorTaxi
 {
+    using System.Windows;
+
     /// <summary>
-    /// Interaction logic for Window1.xaml
+    /// Interaction logic for Window1.xml
     /// </summary>
     public partial class Window1 : Window
     {
-        MainWindow mainWindow = (MainWindow)App.Current.MainWindow;
-        public Window3 _window3;
+        /// <summary>
+        /// Main Window
+        /// </summary>
+        private MainWindow mainWindow = (MainWindow)App.Current.MainWindow;
 
+        /// <summary>
+        /// Third window
+        /// </summary>
+        private Window3 window3;
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref = "Window1"/> class.
+        /// First window
+        /// </summary>
         public Window1()
         {
-            InitializeComponent();
+            this.InitializeComponent();
         }
 
+        /// <summary>
+        /// Add the driver to the order
+        /// </summary>
+        /// <param name="sender">Dispatcher</param>
+        /// <param name="e">Event argument value</param>
         private void AddTaxi(object sender, RoutedEventArgs e)
         {
-            if (mainWindow.a.SelectedOrder != null && mainWindow.a.SelectedTaxi != null)
+            if (this.mainWindow.a.SelectedOrder != null && this.mainWindow.a.SelectedTaxi != null)
             {
-                if (mainWindow.a.SelectedTaxi.Busy == false)
+                if (this.mainWindow.a.SelectedTaxi.Busy == false)
                 {
-                    mainWindow.a.SelectedTaxi.Busy = true;
-                    mainWindow.a.SelectedOrder.Status = status.Appointed;
-                    mainWindow.a.SelectedOrder.CarNumber = mainWindow.a.SelectedTaxi.Number;
-                    mainWindow.orderListView.Items.Refresh();
-                    Taxists.Items.Refresh();
+                    this.mainWindow.a.SelectedTaxi.Busy = true;
+                    this.mainWindow.a.SelectedOrder.Status = Status.Appointed;
+                    this.mainWindow.a.SelectedOrder.CarNumber = this.mainWindow.a.SelectedTaxi.Number;
+                    this.mainWindow.orderListView.Items.Refresh();
+                    this.Taxists.Items.Refresh();
                     this.Close();
                 }
                 else
@@ -51,16 +61,26 @@ namespace OperatorTaxi
             }
         }
 
+        /// <summary>
+        /// Add driver
+        /// </summary>
+        /// <param name="sender">Dispatcher</param>
+        /// <param name="e">Event argument  value</param>
         private void AddTaxist(object sender, RoutedEventArgs e)
         {
-            _window3 = new Window3();
-            _window3.Show();
+            this.window3 = new Window3();
+            this.window3.Show();
         }
 
+        /// <summary>
+        /// Delete driver
+        /// </summary>
+        /// <param name="sender">Dispatcher</param>
+        /// <param name="e">Event argument value</param>
         private void DeleteTaxist(object sender, RoutedEventArgs e)
         {
-            mainWindow.a.DeleteTaxist();
-            mainWindow.orderListView.Items.Refresh();
+            this.mainWindow.a.DeleteTaxist();
+            this.mainWindow.orderListView.Items.Refresh();
         }
     }
 }

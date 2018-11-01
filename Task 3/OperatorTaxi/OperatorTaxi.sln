@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26730.12
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OperatorTaxi", "OperatorTaxi\OperatorTaxi.csproj", "{684E9B91-314A-49F2-BE98-FBB748B93A8F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{77DB8556-0A4F-4EFB-87F2-90919A27C061}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +15,6 @@ Global
 		{684E9B91-314A-49F2-BE98-FBB748B93A8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{684E9B91-314A-49F2-BE98-FBB748B93A8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{684E9B91-314A-49F2-BE98-FBB748B93A8F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{77DB8556-0A4F-4EFB-87F2-90919A27C061}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{77DB8556-0A4F-4EFB-87F2-90919A27C061}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{77DB8556-0A4F-4EFB-87F2-90919A27C061}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{77DB8556-0A4F-4EFB-87F2-90919A27C061}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

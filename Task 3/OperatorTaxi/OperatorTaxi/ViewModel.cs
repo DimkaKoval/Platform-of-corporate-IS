@@ -1,99 +1,130 @@
-﻿namespace OperatorTaxi
+﻿//-----------------------------------------------------------------------
+// <copyright file="ViewModel.cs" company="The Four Shchews">
+// (c)TFS inc.
+// </copyright>
+//-----------------------------------------------------------------------
+
+namespace OperatorTaxi
 {
     using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.IO;
-    using System.ComponentModel;
     using System.Collections.ObjectModel;
+    using System.ComponentModel;
+    using System.IO;
+    using System.Linq;
     using System.Runtime.CompilerServices;
+    using System.Text;
 
+    /// <summary>
+    /// Custom command class. Implements <see cref = "INotifyPropertyChanged"/> interface
+    /// </summary>
     public class ViewModel : INotifyPropertyChanged
     {
+        /// <summary>
+        /// 
+        /// </summary>
         private string path1;
+
+        /// <summary>
+        /// 
+        /// </summary>
         private string path2;
-        private Order selectedOrder;
-        private Taxist selectedTaxi;
+
+        /// <summary>
+        /// Select order
+        /// </summary>
+        private Order selectedorder;
+
+        /// <summary>
+        /// Select taxi
+        /// </summary>
+        private Taxist selectedtaxi;
+
+        /// <summary>
+        /// Orders list
+        /// </summary>
         private ObservableCollection<Order> orders;
+
+        /// <summary>
+        /// Taxists list
+        /// </summary>
         private ObservableCollection<Taxist> taxists;
 
+        /// <summary>
+        /// Gets or sets value Path1 property
+        /// </summary>
         public string Path1
         {
-            get
-            {
-                return path1;
-            }
-            set
-            {
-                path1 = value;
-            }
+            get { return this.path1; }
+            set { this.path1 = value; }
         }
 
+        /// <summary>
+        /// Gets or sets value Path2 property
+        /// </summary>
         public string Path2
         {
-            get
-            {
-                return path2;
-            }
-            set
-            {
-                path2 = value;
-            }
+            get { return this.path2; }
+            set { this.path2 = value; }
         }
 
+        /// <summary>
+        /// Select order for taxist
+        /// </summary>
         public Order SelectedOrder
         {
-            get
-            {
-                return selectedOrder;
-            }
+            get { return this.selectedorder; }
+
             set
             {
-                selectedOrder = value;
+                this.selectedorder = value;
                 OnPropertyChanged("SelectedOrder");
             }
         }
 
+        /// <summary>
+        /// Select taxist for order
+        /// </summary>
         public Taxist SelectedTaxi
         {
-            get
-            {
-                return selectedTaxi;
-            }
+            get { return this.selectedtaxi; }
             set
             {
-                selectedTaxi = value;
+                this.selectedtaxi = value;
                 OnPropertyChanged("SelectedTaxi");
             }
         }
 
+        /// <summary>
+        /// Gets or sets value Orders property
+        /// </summary>
         public ObservableCollection<Order> Orders
         {
-            get
-            {
-                return orders;
-            }
+            get { return this.orders; }
             set
             {
-                orders = value;
+                this.orders = value;
                 OnPropertyChanged("Orders");
             }
         }
 
+        /// <summary>
+        /// Gets or sets value Taxists property
+        /// </summary>
         public ObservableCollection<Taxist> Taxists
         {
-            get
-            {
-                return taxists;
-            }
+            get { return this.taxists; }
             set
             {
-                taxists = value;
+                this.taxists = value;
                 OnPropertyChanged("Taxists");
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Path1"></param>
+        /// <param name="Path2"></param>
         public ViewModel(string Path1, string Path2)
         {
             this.Path1 = Path1;
@@ -101,6 +132,9 @@
             Upload();
         }
 
+        /// <summary>
+        /// Save lists in file
+        /// </summary>
         public void Save()
         {
             var lines1 = new string[Orders.Count];
@@ -117,11 +151,14 @@
             File.WriteAllLines(Path2, lines2);
         }
 
+        /// <summary>
+        /// Delete order from list
+        /// </summary>
         public void DeleteOrder()
         {
-            if (SelectedOrder.Status == status.Appointed)
+            if (SelectedOrder.Status == Status.Appointed)
             {
-                foreach(var i in Taxists)
+                foreach (var i in Taxists)
                 {
                     if (SelectedOrder.CarNumber == i.Number)
                     {
@@ -133,6 +170,9 @@
             SelectedOrder = Orders.Count != 0 ? Orders.First() : null;
         }
 
+        /// <summary>
+        /// Delete taxist from list
+        /// </summary>
         public void DeleteTaxist()
         {
             if (SelectedTaxi.Busy == true)
@@ -142,7 +182,7 @@
                     if (SelectedTaxi.Number == i.CarNumber)
                     {
                         i.CarNumber = "------";
-                        i.Status = status.NotAppointed;
+                        i.Status = Status.NotAppointed;
                     }
                 }
             }
@@ -150,6 +190,9 @@
             SelectedTaxi = Taxists.Count != 0 ? Taxists.First() : null;
         }
 
+        /// <summary>
+        /// Load information from file
+        /// </summary>
         public void Upload()
         {
             Orders = new ObservableCollection<Order>();
@@ -162,7 +205,7 @@
             string startPoint;
             string endPoint;
             int count;
-            status stat;
+            Status stat;
             string carNumber;
 
             for (int i = 0; i < lines.Length; ++i)
@@ -174,8 +217,8 @@
                     startPoint = line[0];
                     endPoint = line[1];
                     count = Convert.ToInt32(line[2]);
-                    stat = line[3] == "Appointed" ? status.Appointed : status.NotAppointed;
-                    if (line.Length == 5 && stat == status.Appointed)
+                    stat = line[3] == "Appointed" ? Status.Appointed : Status.NotAppointed;
+                    if (line.Length == 5 && stat == Status.Appointed)
                     {
                         carNumber = line[4];
                     }
