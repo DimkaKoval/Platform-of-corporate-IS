@@ -124,7 +124,7 @@ namespace platform6k
 
             reader.Close();
             Console.WriteLine("----------------------------");
-            sqlExpression = "DELETE FROM Employees WHERE LastName='Radysh'";
+            sqlExpression = "DELETE FROM Employees WHERE LastName='Dou'";
             command = new SqlCommand(sqlExpression, connection);
             obj = command.ExecuteNonQuery();
             connection.Close();
