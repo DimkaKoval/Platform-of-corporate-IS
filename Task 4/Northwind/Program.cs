@@ -11,7 +11,11 @@ namespace platform6k
     {
         static void Main(string[] args)
         {
-            SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Desktop\NORTHWND.MDF;Integrated Security=True;Connect Timeout=30");
+            string conStr = @"Data Source = (LocalDB)\MSSQLLocalDB; 
+                            AttachDbFilename = D:\Desktop\NORTHWND.MDF; 
+                            Integrated Security = True; Connect Timeout = 30";
+
+            SqlConnection connection = new SqlConnection(conStr);
             connection.Open();
             string sqlExpression = "SELECT * FROM Employees WHERE EmployeeID = 8";
             SqlCommand command = new SqlCommand(sqlExpression, connection);
