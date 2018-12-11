@@ -85,11 +85,11 @@ namespace CargoDelivery
 		{
 			try
 			{
-				var ordersDict = UnitOfWorkInstance.GetOrders().ToDictionary(order => order.Id,
+				var OrdersDict = UnitOfWorkInstance.GetOrders().ToDictionary(order => order.Id,
 					order => $"{order.ClientData.FirstName} {order.ClientData.LastName}");
-				if (ordersDict.Count > 0)
+				if (OrdersDict.Count > 0)
 				{
-					OrdersList.ItemsSource = ordersDict;
+					OrdersList.ItemsSource = OrdersDict;
 					OrdersExplorer.IsOpen = true;
 					ResetOrderInstance();
 					WindowMain.IsEnabled = false;
