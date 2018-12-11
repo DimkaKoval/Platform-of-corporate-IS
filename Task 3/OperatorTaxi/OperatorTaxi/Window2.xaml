@@ -19,10 +19,17 @@
             </Grid.RowDefinitions>
             <TextBlock HorizontalAlignment="Left" Margin="24,22,0,0" TextWrapping="Wrap" Text="Звідки" VerticalAlignment="Top" Height="30" Width="63"/>
             <TextBox x:Name="startPoint" Grid.Row="0" Width="180" Height="30" HorizontalAlignment="Right" Margin="0 0 20 0"/>
+<<<<<<< HEAD
             
             <TextBlock HorizontalAlignment="Left" Margin="24,22,0,0" TextWrapping="Wrap" Text="Куди" VerticalAlignment="Top" Height="30" Width="63" Grid.Row="1"/>
             <TextBox x:Name="endPoint" Grid.Row="1" Width="180" Height="30" HorizontalAlignment="Right" Margin="0 0 20 0"/>
             
+=======
+
+            <TextBlock HorizontalAlignment="Left" Margin="24,22,0,0" TextWrapping="Wrap" Text="Куди" VerticalAlignment="Top" Height="30" Width="63" Grid.Row="1"/>
+            <TextBox x:Name="endPoint" Grid.Row="1" Width="180" Height="30" HorizontalAlignment="Right" Margin="0 0 20 0"/>
+
+>>>>>>> 05b902d11824351483b3ec598145b18ecc370c8e
             <TextBlock HorizontalAlignment="Left" Margin="24,23,0,0" TextWrapping="Wrap" Text="Кількість людей" VerticalAlignment="Top" Height="30" Width="63" Grid.Row="2"/>
             <TextBox x:Name="count" Grid.Row="2" Width="180" Height="30" HorizontalAlignment="Right" Margin="0 0 20 0"/>
         </Grid>

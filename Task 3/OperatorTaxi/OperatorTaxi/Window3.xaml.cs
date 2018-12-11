@@ -1,3 +1,42 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+﻿//-----------------------------------------------------------------------
+// <copyright file="Window3.xaml.cs" company="The Four Shchews">
+// (c)TFS inc.
+// </copyright>
+//-----------------------------------------------------------------------
+
+namespace OperatorTaxi
+{
+    using System;
+    using System.Windows;
+
+    /// <summary>
+    /// Interaction logic for Window3.xml
+    /// </summary>
+    public partial class Window3 : Window
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref = "Window3"/> class.
+        /// Third window
+        /// </summary>
+        public Window3()
+        {
+            this.InitializeComponent();
+        }
+
+        /// <summary>
+        /// Add new driver
+        /// </summary>
+        /// <param name="sender">Dispatcher</param>
+        /// <param name="e">Event argument value</param>
+        private void AddTaxist(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = (MainWindow)App.Current.MainWindow;
+            if (this.Model.Text != string.Empty && this.Number.Text != string.Empty)
+=======
+>>>>>>> 05b902d11824351483b3ec598145b18ecc370c8e
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,6 +67,10 @@ namespace OperatorTaxi
         {
             MainWindow mainWindow = (MainWindow)App.Current.MainWindow;
             if (this.Model.Text != "" && this.Number.Text != "")
+<<<<<<< HEAD
+=======
+>>>>>>> 69475dd58d1dd7cfbd41bacb19a43a91ce78a4ba
+>>>>>>> 05b902d11824351483b3ec598145b18ecc370c8e
             {
                 try
                 {
